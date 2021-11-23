@@ -26,13 +26,7 @@ export class AudioTrackConstraints {
          * @instance
          */
         this.source = source;
-        /**
-         * @member {string} deviceId
-         * @memberof streamMedia.AudioTrackConstraints
-         * @desc Do not provide deviceId if source is not "mic".
-         * @instance
-         * @see https://w3c.github.io/mediacapture-main/#def-constraint-deviceId
-         */
+
         this.deviceId = undefined;
     }
 }
@@ -110,8 +104,8 @@ export class StreamConstraints {
 }
 
 // eslint-disable-next-line require-jsdoc
-function isVideoConstrainsForScreenCast(constraints) {
-  
+function isVideoConstrainsForScreenCast (constraints) {
+
     return (typeof constraints.video === 'object' && constraints.video.source ===
         MediaFormatModule.VideoSourceInfo.SCREENCAST);
 }
@@ -140,7 +134,7 @@ export class MediaStreamFactory {
      * - Audio source is screen cast, while video source is disabled.
      * @param {streamMedia.StreamConstraints} constraints
      */
-    static createMediaStream(constraints) {
+    static createMediaStream (constraints) {
         console.log(typeof constraints.audio)
         if (typeof constraints !== 'object' ||
             (!constraints.audio && !constraints.video)) {
@@ -219,10 +213,10 @@ export class MediaStreamFactory {
         } else {
             mediaConstraints.video = constraints.video;
         }
-    
+
         if (isVideoConstrainsForScreenCast(constraints)) {
             return navigator.mediaDevices.getDisplayMedia(mediaConstraints);
-        } else {    
+        } else {
             console.log(constraints)
             return navigator.mediaDevices.getUserMedia(mediaConstraints);
         }

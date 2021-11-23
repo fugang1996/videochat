@@ -1,10 +1,9 @@
 import Adapter from './adapter'
 import * as MediaFormatModule from './mediaformat.js';
 import * as streamClient from './createStreams'
-import ConferenceClient from './client';
 import streamModule from './streamModule'
 import unicomMiddle from "./unicomMiddle";
-var ZXRTC = {
+var RTC = {
     // 检测Web SDK 是否支持当前浏览器
     async checkSystemRequirements () {
         try {
@@ -23,11 +22,11 @@ var ZXRTC = {
                 new RTCPeerConnection(serverConfig);
                 return await true;
             } else {
-                console.error('Your browser is not compatible with ZXRTC');
+                console.error('Your browser is not compatible with RTC');
                 return await false
             }
         } catch (error) {
-            console.error('Your browser is not compatible with ZXRTC');
+            console.error('Your browser is not compatible with RTC');
             return await false
 
         }
@@ -219,34 +218,7 @@ var ZXRTC = {
         }
 
 
-        let client = new ConferenceClient(peam)
 
-        // unicomMiddle.authentication(streamConfig.userId, streamConfig.AppId, streamConfig.token).then(e => {
-        //     console.log(e)
-        //     if (e.hasOwnProperty('error')) {
-        //         client.errorDetail()
-        //         return Promise.reject(new TypeError(e.error.message));
-        //     } else {
-        //         if (e.data.enabled == false) {
-        //             client.errorDetail()
-        //             return Promise.reject(new TypeError('无资源包'));
-        //         }
-        //         if (e.data.recordEnabled == false) {
-        //             client.recordEvent()
-        //         }
-
-        //     }
-        // })
-
-
-        // if (client.clientType) {
-
-        // }
-        return client
-
-
-
-        // return client
 
 
     },
@@ -367,4 +339,4 @@ var ZXRTC = {
 
 }
 
-export default ZXRTC
+export default RTC

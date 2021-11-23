@@ -1,18 +1,33 @@
+<!--
+ * @Descripttion: no
+ * @version: 1.0.0
+ * @Author: fugang
+ * @Date: 2021-11-18 15:14:15
+ * @LastEditors: fugang
+ * @LastEditTime: 2021-11-23 09:13:03
+-->
 # demo
 
-## Project setup
+## 安装依赖
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 项目启动
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 项目打包
 ```
 yarn build
+```
+
+### 项目截图
+
+```javascript
+<img src='../videochat/src/assets/videoscreenshot.png'>
+
 ```
 
 ### Customize configuration
