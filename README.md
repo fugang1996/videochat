@@ -4,7 +4,7 @@
  * @Author: fugang
  * @Date: 2021-11-18 15:14:15
  * @LastEditors: fugang
- * @LastEditTime: 2021-11-23 09:15:31
+ * @LastEditTime: 2021-11-23 09:17:03
 -->
 # demo
 
@@ -25,7 +25,7 @@ yarn build
 
 ### 项目截图
 
-![avatar](/videochat/src/assets/videoscreenshot.png)
+![avatar](../videochat/src/assets/videoscreenshot.png)
 
 
 ### Customize configuration
