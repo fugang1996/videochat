@@ -24,11 +24,9 @@ yarn build
 ```
 
 ### 项目截图
-..
-```
+
 ![avatar](/videochat/src/assets/videoscreenshot.png)
 
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
